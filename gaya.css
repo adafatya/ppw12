@@ -1,0 +1,45 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 11px;
+	margin: 8px auto;
+	width: 600px;
+}
+
+a, a:visited {
+	color: blue;
+	text-decoration: underline;
+}
+
+a:hover {
+	background: #8AC452;
+	color: white;
+	text-decoration: none;
+}
+
+input, textarea, select {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+p {
+	text-align: justify;
+}
+
+form>* {
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	margin-bottom: 16px;
+}
+
+form>label {
+	width: 96px;
+}
+
+form>input, form>textarea, form>select {
+	width: calc(100% - 96px);
+}
+
+form>input[type=submit], form>input[type=reset] {
+	width: initial;
+}
