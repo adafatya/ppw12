@@ -43,3 +43,7 @@ form>input, form>textarea, form>select {
 form>input[type=submit], form>input[type=reset] {
 	width: initial;
 }
+
+.komentar {
+	margin-top: 120px;
+}

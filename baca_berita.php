@@ -78,25 +78,22 @@ if (!$berita) {
 		<input type="submit" value="kirim">
 	</form>
 
-	<p><br></p>
-	<p><br></p>
-	<p><br></p>
-	<p><br></p>
-
-	<?php
-	while ($komentar = $daftar_komentar->fetch_array()) {
-		$komentator = htmlspecialchars($komentar["komentator"]);
-		$komentarnya = str_replace("\r\n", "</p>\r\n<p>", htmlspecialchars($komentar["komentar"]));
-		$tanggal = trim(strftime('%e %B %G %H.%M.%S', strtotime($komentar["tanggal"])));
-	?>
-		<br /> <hr />
-		<h3>
-			<?= $komentator ?>
-		</h3>
-		<small>Tanggal: <?= $tanggal ?> WIB</small><br>
-		<p><?= $komentarnya ?></p>
-	<?php
-	}
-	?>
+	<div class="komentar">
+		<?php
+		while ($komentar = $daftar_komentar->fetch_array()) {
+			$komentator = htmlspecialchars($komentar["komentator"]);
+			$komentarnya = str_replace("\r\n", "</p>\r\n<p>", htmlspecialchars($komentar["komentar"]));
+			$tanggal = trim(strftime('%e %B %G %H.%M.%S', strtotime($komentar["tanggal"])));
+		?>
+			<br /> <hr />
+			<h3>
+				<?= $komentator ?>
+			</h3>
+			<small>Tanggal: <?= $tanggal ?> WIB</small><br>
+			<p><?= $komentarnya ?></p>
+		<?php
+		}
+		?>
+	</div>
 </body>
 </html>
