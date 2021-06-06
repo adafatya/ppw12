@@ -79,6 +79,9 @@ if (!$berita) {
 	</form>
 
 	<p><br></p>
+	<p><br></p>
+	<p><br></p>
+	<p><br></p>
 
 	<?php
 	while ($komentar = $daftar_komentar->fetch_array()) {
